@@ -1,0 +1,59 @@
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: #F7F7F8;
+}
+
+body {
+  font-family: -apple-system, 'SF Pro Display', BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ── Form Elements ── */
+input {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+}
+
+input::placeholder {
+  color: #C7C7CC;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+/* Hide number input spinners */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Utility ── */
+.nb:active {
+  opacity: 0.5;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+}
